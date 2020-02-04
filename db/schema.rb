@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2020_02_04_174736) do
 
   create_table "modifiers", force: :cascade do |t|
     t.string "damage_modifier_name"
     t.integer "damage_modifier"
-
-ActiveRecord::Schema.define(version: 2020_02_04_173453) do
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "planets", force: :cascade do |t|
     t.string "name"
     t.integer "hp"
     t.integer "base_attack"
-    t.string "image"
+    t.string "image", default: "https://media.istockphoto.com/photos/generic-planet-beyond-our-solar-system-isolated-on-black-picture-id466766494?k=6&m=466766494&s=170667a&w=0&h=UEXCQqxDumiQop7cs3OB2Qe0Wv0SEb4sVGe8a8Zn5tI="
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
