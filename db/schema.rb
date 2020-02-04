@@ -10,11 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_02_04_174736) do
 
   create_table "modifiers", force: :cascade do |t|
     t.string "damage_modifier_name"
     t.integer "damage_modifier"
+
+ActiveRecord::Schema.define(version: 2020_02_04_173453) do
+
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.integer "hp"
+    t.integer "base_attack"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
