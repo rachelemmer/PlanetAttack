@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :games, only: [:index]
   resources :modifiers, only: [:index]
 
   resources :planets
