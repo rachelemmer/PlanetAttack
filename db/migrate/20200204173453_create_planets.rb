@@ -4,7 +4,7 @@ class CreatePlanets < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :hp
       t.integer :base_attack
-      t.string :image
+      t.string :image, default: nil
 
       t.timestamps
     end
